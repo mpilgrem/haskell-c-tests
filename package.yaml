@@ -7,7 +7,7 @@ dependencies: base
 
 library:
   source-dirs: src
-  # The Fib_stub.h header must be put by GHC somewhere where Cabal can find it.
+  # The Lib_stub.h header must be put by GHC somewhere where Cabal can find it.
   # This tells GHC to put it in the stubs directory of the project directory.
   ghc-options:
   - -stubdir stubs
