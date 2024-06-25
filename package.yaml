@@ -1,0 +1,30 @@
+spec-version: 0.36.0
+
+name: haskell-c-tests
+version: 0.1.0.0
+
+dependencies: base
+
+library:
+  source-dirs: src
+  # The Fib_stub.h header must be put by GHC somewhere where Cabal can find it.
+  # This tells GHC to put it in the stubs directory of the project directory.
+  ghc-options:
+  - -stubdir stubs
+
+executables:
+  haskell-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies: haskell-c-tests
+  c-exe:
+    main: main.c
+    source-dirs: c-app
+    ghc-options: -no-hs-main
+    # This specifies that directory stubs should be searched for header files.
+    include-dirs: stubs
+    dependencies: haskell-c-tests

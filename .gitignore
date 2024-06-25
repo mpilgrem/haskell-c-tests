@@ -1,0 +1,6 @@
+# Haskell Tool Stack-related
+.stack-work/
+stack.yaml.lock
+
+# Project-related
+stubs
