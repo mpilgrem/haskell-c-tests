@@ -10,7 +10,7 @@ library:
   # The Lib_stub.h header must be put by GHC somewhere where Cabal can find it.
   # This tells GHC to put it in the stubs directory of the project directory.
   ghc-options:
-  - -stubdir stubs
+  - -stubdir autogen-stubs
 
 executables:
   haskell-exe:
@@ -26,5 +26,5 @@ executables:
     source-dirs: c-app
     ghc-options: -no-hs-main
     # This specifies that directory stubs should be searched for header files.
-    include-dirs: stubs
+    include-dirs: autogen-stubs
     dependencies: haskell-c-tests

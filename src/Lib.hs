@@ -1,5 +1,5 @@
 module Lib
-  ( myMax
+  ( myMax -- Exported only for the use of the 'Haskell' executable
   ) where
 
 import Foreign.C.Types ( CInt (..) )

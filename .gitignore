@@ -3,4 +3,4 @@
 stack.yaml.lock
 
 # Project-related
-stubs
+autogen-stubs

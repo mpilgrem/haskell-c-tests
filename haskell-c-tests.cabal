@@ -15,7 +15,7 @@ library
       Lib
   hs-source-dirs:
       src
-  ghc-options: -stubdir stubs
+  ghc-options: -stubdir autogen-stubs
   build-depends:
       base
   default-language: Haskell2010
@@ -26,7 +26,7 @@ executable c-exe
       c-app
   ghc-options: -no-hs-main
   include-dirs:
-      stubs
+      autogen-stubs
   build-depends:
       base
     , haskell-c-tests
